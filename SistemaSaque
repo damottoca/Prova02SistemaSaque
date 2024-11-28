@@ -1,0 +1,54 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public  class SistemaBancario {
+    private JButton btnSaque;
+    private JButton btnDeposito;
+    private JTextField textTela;
+    private JButton btnLimpar;
+    private JPanel mainPainel;
+    private JTextField textTela02;
+    private JTextField textSaldo;
+    private JTextField textField1;
+
+    public SistemaBancario() {
+
+
+
+
+        btnSaque.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              textTela.setText(textTela02.getText());
+
+            }
+        });
+        btnDeposito.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              textTela.setText(textTela02.getText());
+            }
+        });
+        btnLimpar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+             textTela.setText(textTela02.getText());
+            }
+        });
+    }
+
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("SistemaBancario02");
+        frame.setContentPane(new SistemaBancario().mainPainel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+}
+
+
+
+
